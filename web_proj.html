@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Badin-Gong System</title>
+  <script src="func.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 font-sans">
+  <!-- Login Page -->
+  <div id="login-page" class="h-screen flex flex-col items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
+      <div class="flex justify-center mb-6">
+      </div>
+      <h1 class="text-3xl font-extrabold mb-6 text-center text-blue-600">Badin-Gong Login</h1>
+      <input
+        id="username"
+        type="text"
+        placeholder="Enter your username"
+        class="w-full mb-4 p-3 border border-gray-300 rounded-lg focus:ring focus:ring-blue-200 focus:outline-none"
+      />
+      <input
+        id="password"
+        type="password"
+        placeholder="Enter your password"
+        class="w-full mb-4 p-3 border border-gray-300 rounded-lg focus:ring focus:ring-blue-200 focus:outline-none"
+      />
+      <button
+        id="login-btn"
+        class="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition-all"
+      >
+        Login
+      </button>
+    </div>
+  </div>
+
+  <!-- Dashboard Page -->
+  <div id="dashboard-page" class="hidden h-screen p-8">
+    <h1 class="text-4xl font-bold mb-6 text-gray-800">Dashboard</h1>
+    <div class="grid gap-4">
+      <button
+        id="view-attendance-btn"
+        class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 shadow-md transition-all"
+      >
+        View Attendance Report
+      </button>
+      <button
+        id="profile-btn"
+        class="bg-yellow-500 text-white px-6 py-3 rounded-lg hover:bg-yellow-600 shadow-md transition-all"
+      >
+        Manage Profile
+      </button>
+      <button
+        id="logout-btn"
+        class="bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 shadow-md transition-all"
+      >
+        Logout
+      </button>
+    </div>
+  </div>
+
+  <!-- Attendance Report Page -->
+  <div id="report-page" class="hidden h-screen p-8">
+    <h1 class="text-4xl font-bold mb-6 text-gray-800">Attendance Report</h1>
+    <table class="table-auto w-full bg-white rounded-lg shadow-md">
+      <thead>
+        <tr class="bg-blue-500 text-white">
+          <th class="px-4 py-3 text-left">Student Name</th>
+          <th class="px-4 py-3 text-left">Course</th>
+          <th class="px-4 py-3 text-left">Attendance</th>
+        </tr>
+      </thead>
+      <tbody id="report-body">
+        <!-- Rows will be dynamically added here -->
+      </tbody>
+    </table>
+    <button
+      id="back-to-dashboard"
+      class="mt-6 bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 shadow-md transition-all"
+    >
+      Back to Dashboard
+    </button>
+  </div>
+</body>
+</html>
