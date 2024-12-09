@@ -306,6 +306,8 @@ function displayUsernamesAndPasswords() {
     users.forEach(user => {
       userList += `Username: ${user.username},    Password: ${user.password}\n`;
     });
+
+    userList = userList.slice(0, -1);
   
     // Display the alert with the formatted list of usernames and passwords
     alert(userList);
