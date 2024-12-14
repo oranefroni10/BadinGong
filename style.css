@@ -1,9 +1,9 @@
 /* styles.css */
-
 body {
     font-family: 'Inter', sans-serif;
     background: linear-gradient(to bottom, #f8fafc, #e0f7fa);
   }
+
   
   h1 {
     font-weight: 700;
@@ -37,4 +37,28 @@ body {
   .table-auto tr:hover {
     background-color: #f1f5f9;
   }
+
+  #login-page {
+    background-image: url('images/logo.png');
+    background-position: center;
+}
   
+html.dark {
+  color-scheme: dark;
+  background-color: #1a202c;
+  color: #e2e8f0;
+}
+
+.dark body {
+  background-color: #2d3748;
+}
+
+.dark input {
+  background-color: #4a5568;
+  color: #e2e8f0;
+  border-color: #718096;
+}
+
+.dark button {
+  background-color: #4a5568;
+}
